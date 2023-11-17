@@ -1,0 +1,1 @@
+local p = peripheral.wrap("monitor")
