@@ -1,10 +1,15 @@
 local baseUrl = "https://raw.githubusercontent.com/Ampix/BuildersScripts/master/"
 
-if(fs.exists("versions.lua") == false) then
+if fs.exists("versions.lua") == false then
     write("Verziókezelő nem elérhető")
     local verlua = io.open("versions.lua","w+")
-    verlua:write(http.get(baseUrl .. "versions.lua").readAll())
-    verlua:close()
+    local file = http.get(baseUrl .. "versions.lua")
+    if file then
+        local content = file.readAll()
+        file.close()
+        verlua:write(content)
+        verlua:close()
+    end
 end
 
 local ver = require("updater")
