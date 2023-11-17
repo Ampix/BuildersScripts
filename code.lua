@@ -1,1 +1,3 @@
-local p = peripheral.wrap("monitor")
+local function teszt()
+    write("jani")
+end
