@@ -5,7 +5,7 @@ term.clear()
 if not fs.exists("versions.lua") then
     term.setCursorPos(1,1)
     write("Verziókezelö nem elérhetö")
-    sleep(0.5)
+    sleep(1)
     term.setCursorPos(1,2)
     write("Letöltés...")
     local verlua = io.open("versions.lua","w+")
@@ -24,10 +24,13 @@ local ver = require("versions")
 if ver then
     term.clear()
     term.setCursorPos(1,1)
+    sleep(1)
     write("Ampix Builders Scripts v" .. ver.updater)
     term.setCursorPos(1,2)
+    sleep(2)
     write("Betöltés...")
     term.setCursorPos(1,3)
+    sleep(2)
 else
     write("Verzió lekérés sikertelen, kérlek fordulj a készítöhöz!")
 end
