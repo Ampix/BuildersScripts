@@ -20,6 +20,6 @@ end
 
 term.clear()
 term.setCursorPos(1,1)
-write("Ampix Builders Scripts")
+write("Ampix Builders Scripts Loader")
 sleep(1)
 checkDir()
