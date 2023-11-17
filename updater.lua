@@ -10,7 +10,7 @@ if file then
     verlua:close()
 end
 
-local ver = require("ampix/versions")
+local ver = require("versions")
 if ver then
     term.clear()
     term.setCursorPos(1,1)
